@@ -5,7 +5,7 @@ var currentNumber = 0;
 function increment() {
 	currentNumber = currentNumber + 1;
 	currentNumberWrapper.innerHTML = currentNumber;
-  desabilitarMais();
+  disableButtons();
   //desabilitarMenos();
 }
 
@@ -20,9 +20,10 @@ function decrement() {
 	currentNumber = currentNumber - 1;
 	currentNumberWrapper.innerHTML = currentNumber;
 	//verifyNumber()
+  disableButtons();
 }
 
-function desabilitarMais() {
+function disableButtons() {
 	// verificar se o Nº é 10
 	// se for 10 desabilita o botão
 
@@ -39,7 +40,7 @@ function desabilitarMais() {
     //document.botaoMenos.innerHTML = "x"
   } else if (currentNumber < 0) {
     document.getElementById('currentNumber').style.color = '#ff0000';
-  } else if (currentNumber > 0) {
+  } else if (currentNumber >= 0) {
     document.getElementById('currentNumber').style.color = '#000000';
   } else {
     botaoMais.disabled = false;

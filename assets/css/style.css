@@ -14,7 +14,7 @@ button {
   height: 30px;
   width: 30px;
   border-radius: 20%;
-  border: 2px solid blue;
+  border: 1.5px solid blue;
   background-color: rgb(241,214,214);
   color: blue;
   font-size: 15pt;
@@ -22,9 +22,9 @@ button {
   text-align: center;
 }
 
-#counter {
-  /*display: flex;*/
-}
+/*#counter {
+  display: flex;
+}*/
 
 #counterNumber {
   display:flex;
@@ -33,4 +33,3 @@ button {
   margin: 0 20px;
   font-size: 15pt;
 }
-

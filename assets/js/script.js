@@ -7,7 +7,7 @@ function increment() {
 	currentNumberWrapper.innerHTML = currentNumber;
   disableButtons();
   changeColor();
-  changeColorButtonAdicionar();
+  //changeColorButtonAdicionar();
   //desabilitarMenos();
 }
 
@@ -24,7 +24,7 @@ function decrement() {
 	//verifyNumber()
   disableButtons();
   changeColor();
-  changeColorButtonSubtrair();
+  //changeColorButtonSubtrair();
 }
 
 function disableButtons() {
@@ -38,12 +38,22 @@ function disableButtons() {
 
 	if (currentNumber === 10) {
 		// desabilita o botão
-		botaoMais.disabled = true;
+    botaoMais.disabled = true;
+    var mudaBotaoColor = botaoMais.style.color = '#808080'; 
+    var mudaBotaoBorder = (botaoMais.style.border = '1.5px solid #808080');
+    var changeColorButtonAdd = mudaBotaoColor + mudaBotaoBorder;
+    changeColorButtonAdd;
 	} else if (currentNumber === -10) {
-		botaoMenos.disabled = true;
+    botaoMenos.disabled = true;
+    botaoMenos.style.color = '#808080';
+    botaoMenos.style.border = '1.5px solid #808080';
   } else {
     botaoMais.disabled = false;
+    botaoMais.style.color = 'blue';
+    botaoMais.style.border = '1.5px solid blue';
     botaoMenos.disabled = false;
+    botaoMenos.style.color = 'blue';
+    botaoMenos.style.border = '1.5px solid blue';
   }
   
 
@@ -60,23 +70,25 @@ function changeColor() {
   }
 }
 
-function changeColorButtonAdicionar() {
+/*function changeColorButtonAdicionar(botaoMais) {
   if (currentNumber === 10) {
-    document.getElementsByName('adicionar').style.color = '#808080';
+    botaoMais.style.color = '#808080';
   } else {
-    document.elementsByName('adicionar').style.color = 'blue';
+    botaoMais.style.color = 'blue';
     //document.elementsByName('adicionar').style = 'background-color: rgb(241,214,214)';
   }
 }
 
-function changeColorButtonSubtrair() {
+function changeColorButtonSubtrair(botaoMenos) {
+  // e se eu juntar essa função com o desabilitar o botão?
+
   if (currentNumber === -10) {
-    document.getElementsByName('subtrair').style.color = '#808080';
+    botaoMenos.style.color = '#808080';
   } else {
-    document.elementsByName('subtrair').style.color = 'blue';
+    botaoMenos.style.color = 'blue';
     //document.elementsByName('subtrair').style.background-color = 'rgb(241,214,214)'
   }
-}
+}*/
 
 /*function desabilitarMenos() {
 	var listaElementosMenos = document.getElementsByName('subtrair')

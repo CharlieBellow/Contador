@@ -7,6 +7,7 @@ function increment() {
 	currentNumberWrapper.innerHTML = currentNumber;
   disableButtons();
   changeColor();
+  changeColorButtonAdicionar();
   //desabilitarMenos();
 }
 
@@ -23,6 +24,7 @@ function decrement() {
 	//verifyNumber()
   disableButtons();
   changeColor();
+  changeColorButtonSubtrair();
 }
 
 function disableButtons() {
@@ -55,6 +57,24 @@ function changeColor() {
     document.getElementById('currentNumber').style.color = '#ff0000';
   } else if (currentNumber >= 0) {
     document.getElementById('currentNumber').style.color = '#000000';
+  }
+}
+
+function changeColorButtonAdicionar() {
+  if (currentNumber === 10) {
+    document.getElementsByName('adicionar').style.color = '#808080';
+  } else {
+    document.elementsByName('adicionar').style.color = 'blue';
+    //document.elementsByName('adicionar').style = 'background-color: rgb(241,214,214)';
+  }
+}
+
+function changeColorButtonSubtrair() {
+  if (currentNumber === -10) {
+    document.getElementsByName('subtrair').style.color = '#808080';
+  } else {
+    document.elementsByName('subtrair').style.color = 'blue';
+    //document.elementsByName('subtrair').style.background-color = 'rgb(241,214,214)'
   }
 }
 

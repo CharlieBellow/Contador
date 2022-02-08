@@ -6,6 +6,7 @@ function increment() {
 	currentNumber = currentNumber + 1;
 	currentNumberWrapper.innerHTML = currentNumber;
   disableButtons();
+  changeColor();
   //desabilitarMenos();
 }
 
@@ -21,6 +22,7 @@ function decrement() {
 	currentNumberWrapper.innerHTML = currentNumber;
 	//verifyNumber()
   disableButtons();
+  changeColor();
 }
 
 function disableButtons() {
@@ -37,23 +39,24 @@ function disableButtons() {
 		botaoMais.disabled = true;
 	} else if (currentNumber === -10) {
 		botaoMenos.disabled = true;
-    //document.botaoMenos.innerHTML = "x"
-  } else if (currentNumber < 0) {
-    document.getElementById('currentNumber').style.color = '#ff0000';
-  } else if (currentNumber >= 0) {
-    document.getElementById('currentNumber').style.color = '#000000';
   } else {
     botaoMais.disabled = false;
     botaoMenos.disabled = false;
   }
   
 
-
 	/*while (currentNumber === 10) {
 		botaoMais.disabled = true;
 	}*/
 }
 
+function changeColor() {
+  if (currentNumber < 0) {
+    document.getElementById('currentNumber').style.color = '#ff0000';
+  } else if (currentNumber >= 0) {
+    document.getElementById('currentNumber').style.color = '#000000';
+  }
+}
 
 /*function desabilitarMenos() {
 	var listaElementosMenos = document.getElementsByName('subtrair')

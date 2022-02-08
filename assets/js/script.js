@@ -30,12 +30,13 @@ function desabilitarMais() {
 	var botaoMais = listaElementosMais[0];
   var listaElementosMenos = document.getElementsByName('subtrair');
   var botaoMenos = listaElementosMenos[0];
-  
+
 	if (currentNumber === 10) {
 		// desabilita o botão
 		botaoMais.disabled = true;
 	} else if (currentNumber === -10) {
 		botaoMenos.disabled = true;
+    //document.botaoMenos.innerHTML = "x"
   } else if (currentNumber < 0) {
     document.getElementById('currentNumber').style.color = '#ff0000';
   } else if (currentNumber > 0) {

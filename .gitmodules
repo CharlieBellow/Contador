@@ -1,0 +1,3 @@
+[submodule "contador"]
+	path = contador
+	url = git@github.com:CharlieBellow/Contador.git
